@@ -56,10 +56,6 @@ int get(char* key, struct HashMap** givenMap)
 	int i = 0;
 	const int hash_key = getHorner(key);
 	int hashed = HASH(hash_key, i);
-	if (hashed == 2936)
-	{
-		printf("I am here");
-	}
 	while (givenMap[hashed]->value != NULL && strncmp(givenMap[hashed]->value, key, 4) != 0)
 	{
 		hashed = HASH(hash_key, ++i);
