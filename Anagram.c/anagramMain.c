@@ -134,7 +134,11 @@ int getScore(char* word)
 	if (anagram(word))
 	{
 		insert(getHorner(word), word, wordMap);
-		return 5;
+		if(get(word, hashMap) > 0)
+		{
+			return 5;
+		}
+		return -5;
 	}
 	else
 	{
